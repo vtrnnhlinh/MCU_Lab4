@@ -1,0 +1,10 @@
+/*
+ * scheduler.c
+ *
+ *  Created on: Nov 9, 2024
+ *      Author: Nguyen Quoc Kiet
+ */
+
+
+#include "scheduler.h"
+#define TICK 10

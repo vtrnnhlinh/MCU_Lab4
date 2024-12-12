@@ -1,0 +1,21 @@
+10:02:44 **** Incremental Build of configuration Debug for project Exercise_Lab4 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/scheduler.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/scheduler.d" -MT"Core/Src/scheduler.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/scheduler.o"
+arm-none-eabi-gcc -o "Exercise_Lab4.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TAI_LIEU\HK_7\MicronProcessor_MicroController\Lab_4\STM32CudeIDE\Exercise_Lab4\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Exercise_Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Exercise_Lab4.elf
+ 
+arm-none-eabi-size   Exercise_Lab4.elf 
+arm-none-eabi-objdump -h -S  Exercise_Lab4.elf  > "Exercise_Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+   7840	     20	   2460	  10320	   2850	Exercise_Lab4.elf
+arm-none-eabi-objcopy  -O ihex  Exercise_Lab4.elf  "Exercise_Lab4.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary  Exercise_Lab4.elf  "Exercise_Lab4.bin"
+ 
+Finished building: Exercise_Lab4.hex
+Finished building: Exercise_Lab4.bin
+Finished building: Exercise_Lab4.list
+ 
+ 
+ 
